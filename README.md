@@ -1,5 +1,9 @@
 # CSV_To_A08
-Channel takes a CSV File as input and transforms it into an A08 Message. 
+This Channel takes a CSV File as input and transforms it into an A08 Messages. For each line in CSV File, a seperate .hl7 file is created. 
+
+The first line of the CSV File is expected to be the header. 
+Structure of CSV File is 
+Number,Gender,NameSet,Title,GivenName,MiddleInitial,Surname,StreetAddress,City,State,StateFull,ZipCode,Country,CountryFull,EmailAddress,Username,Password,BrowserUserAgent,TelephoneNumber,TelephoneCountryCode,MothersMaiden,Birthday,Age,TropicalZodiac,CCType,CCNumber,CVV2,CCExpires,NationalID,UPS,WesternUnionMTCN,MoneyGramMTCN,Color,Occupation,Company,Vehicle,Domain,BloodType,Pounds,Kilograms,FeetInches,Centimeters,GUID,Latitude,Longitude
 
 Following is CSV field to ADT Message Mapping 
 
@@ -18,5 +22,15 @@ CSV_13  Country	       PID-11.6
 CSV_21  MothersMaiden  PID-6.2
 CSV_22  Birthday       PID-7
 CSV_29  NationalID     PID-3.1
+
+Instructions to use the channel
+-------------------------------
+1. Import /code/CSV To HL7 ADT A08.xml into Mirth Connect
+2. In Source Tab change 
+   a. Director
+   b. Move-to-Directory
+   c. Error Move-to- Directory
+3. In Destinations Tab change
+   a. Directory
 
 
